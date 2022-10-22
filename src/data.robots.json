@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "type": "sitemap",
+      "content": "https://carbondigital.us/sitemaps/post-sitemap1.xml"
+    },
+    {
+      "type": "sitemap",
+      "content": "https://carbondigital.us/sitemaps/page-sitemap1.xml"
+    },
+    {
+      "type": "sitemap",
+      "content": "https://carbondigital.us/sitemaps/projects-sitemap1.xml"
+    },
+    {
+      "type": "sitemap",
+      "content": "https://carbondigital.us/sitemaps/services-sitemap1.xml"
+    },
+    {
+      "type": "sitemap",
+      "content": "https://carbondigital.us/sitemaps/locations-sitemap1.xml"
+    },
+    {
+      "type": "sitemap",
+      "content": "https://carbondigital.us/sitemaps/category-sitemap1.xml"
+    },
+    {
+      "type": "blank",
+      "content": ""
+    },
+    {
+      "type": "user-agent",
+      "content": "SemrushBot"
+    },
+    {
+      "type": "disallow",
+      "content": "/"
+    },
+    {
+      "type": "user-agent",
+      "content": "SemrushBot-SA"
+    },
+    {
+      "type": "disallow",
+      "content": "/"
+    },
+    {
+      "type": "user-agent",
+      "content": "MJ12bot"
+    },
+    {
+      "type": "disallow",
+      "content": "/"
+    },
+    {
+      "type": "user-agent",
+      "content": "Mediapartners-Google"
+    },
+    {
+      "type": "disallow",
+      "content": ""
+    },
+    {
+      "type": "user-agent",
+      "content": "Googlebot-Image"
+    },
+    {
+      "type": "disallow",
+      "content": ""
+    },
+    {
+      "type": "user-agent",
+      "content": "*"
+    },
+    {
+      "type": "disallow",
+      "content": "/wp-admin/"
+    },
+    {
+      "type": "allow",
+      "content": "/wp-admin/admin-ajax.php"
+    }
+  ]
+}
