@@ -86,7 +86,7 @@ export class RobotsGenerator {
       let fileData: any = [];
       // create interface with the read stream
       const readline = createInterface({
-        input: createReadStream(filePath, 'utf8'),
+        input: createReadStream('filePath', 'utf8'),
         crlfDelay: Infinity
       });
       // for each line being read, the line event kicks off
