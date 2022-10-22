@@ -18,7 +18,7 @@ export class RobotsGenerator {
     const commentCharacter = '#';
     return line.substring(1) === commentCharacter;
   }
-
+  // NOT DONE
   // flag blank lines
   private isBlank(line: string): boolean {
     const cleanLine = line;
