@@ -5,10 +5,6 @@ import { createInterface } from 'readline';
 // Custom Modules
 import { Line, LineSplit, LineType } from './options';
 
-  // remove whitespace before & after line to make parsing each line easier
-  private trimWhitespace(line: string): string {
-    return line.trim();
-  }
 export class RobotsGenerator {
 
   // flag lines with comments
