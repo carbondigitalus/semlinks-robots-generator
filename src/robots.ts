@@ -44,7 +44,7 @@ export class RobotsGenerator {
     // @ts-ignore-next-line
     return line.directive.toLowerCase().includes(value);
   }
-
+  // NOT DONE
   // parse file into array format
   private parseLineIntoArray(line: string): Line {
     // trim spaces before-after line
