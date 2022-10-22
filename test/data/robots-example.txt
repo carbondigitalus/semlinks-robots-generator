@@ -1,0 +1,20 @@
+Sitemap: https://carbondigital.us/sitemaps/post-sitemap1.xml
+Sitemap: https://carbondigital.us/sitemaps/page-sitemap1.xml
+Sitemap: https://carbondigital.us/sitemaps/projects-sitemap1.xml
+Sitemap: https://carbondigital.us/sitemaps/services-sitemap1.xml
+Sitemap: https://carbondigital.us/sitemaps/locations-sitemap1.xml
+Sitemap: https://carbondigital.us/sitemaps/category-sitemap1.xml
+
+User-agent: SemrushBot
+    Disallow: /
+User-agent: SemrushBot-SA
+    Disallow: /
+User-agent: MJ12bot
+    Disallow: /
+User-agent: Mediapartners-Google
+    Disallow: 
+User-agent: Googlebot-Image
+    Disallow: 
+User-agent: *
+    Disallow: /wp-admin/
+    Allow: /wp-admin/admin-ajax.php
