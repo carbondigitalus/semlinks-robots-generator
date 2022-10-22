@@ -1,7 +1,7 @@
 {
   "name": "@carbondigital/robots-parser",
-  "version": "0.0.13",
   "description": "Robots parser that is used in our SEO application.",
+  "version": "0.0.1",
   "author": {
     "name": "Carbon Digital",
     "email": "hello@carbondigital.us",
