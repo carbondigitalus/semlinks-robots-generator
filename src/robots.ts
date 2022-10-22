@@ -7,6 +7,7 @@ import { Line, LineSplit, LineType } from './options';
 
 export class RobotsGenerator {
   private configDataGet() {}
+  private configDataParse() {}
   private fileDataGet() {}
 
   // flag lines with comments
