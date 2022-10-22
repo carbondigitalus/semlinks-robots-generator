@@ -38,7 +38,7 @@ export class RobotsGenerator {
       value: line.substring(colonIndex + 1, len)
     };
   }
-
+  // NOT DONE
   // check for user-agent
   private checkDirective(line: LineSplit, value: LineType): boolean {
     // @ts-ignore-next-line
