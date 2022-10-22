@@ -6,8 +6,8 @@ import { createInterface } from 'readline';
 import { Line, LineSplit, LineType } from './options';
 
 export class RobotsGenerator {
-  private fileData() {}
   private configDataGet() {}
+  private fileDataGet() {}
 
   // flag lines with comments
   private isComment(line: string): boolean {
