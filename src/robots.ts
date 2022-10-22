@@ -16,7 +16,7 @@ export class RobotsGenerator {
 
   // flag blank lines
   private isBlank(line: string): boolean {
-    const cleanLine = this.trimWhitespace(line);
+    const cleanLine = line;
     if (cleanLine === '' || cleanLine === ' ') {
       return true;
     }
