@@ -7,6 +7,7 @@ import { Line, LineSplit, LineType } from './options';
 
 export class RobotsGenerator {
   private configData() {}
+  private fileData() {}
 
   // flag lines with comments
   private isComment(line: string): boolean {
