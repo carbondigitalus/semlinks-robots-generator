@@ -62,7 +62,7 @@ export class RobotsGenerator {
     }
     // check for disallow and return values
     const isDisallow = this.checkDirective(parsedLine, LineType.disallow);
-    if (isDisallow) return { type: LineType.disallow, content: this.trimWhitespace(parsedLine.value) };
+    if (isDisallow) return { type: LineType.disallow, content: parsedLine.value };
     // check for allow and return values
     const isAllow = this.checkDirective(parsedLine, LineType.allow);
     if (isAllow) return { type: LineType.allow, content: this.trimWhitespace(parsedLine.value) };
