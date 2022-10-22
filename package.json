@@ -1,7 +1,7 @@
 {
-  "name": "@carbondigital/robots-parser",
-  "description": "Robots parser that is used in our SEO application.",
+  "name": "@carbondigital/robots-generator",
   "version": "0.0.1",
+  "description": "Robots generator that is used in our SEO application.",
   "author": {
     "name": "Carbon Digital",
     "email": "hello@carbondigital.us",
@@ -10,11 +10,11 @@
   "license": "GNU",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carbondigitalus/semlinks-robots-parser.git"
+    "url": "git+https://github.com/carbondigitalus/semlinks-robots-generator.git"
   },
-  "homepage": "https://github.com/carbondigitalus/semlinks-robots-parser#readme",
+  "homepage": "https://github.com/carbondigitalus/semlinks-robots-generator#readme",
   "bugs": {
-    "url": "https://github.com/carbondigitalus/semlinks-robots-parser/issues"
+    "url": "https://github.com/carbondigitalus/semlinks-robots-generator/issues"
   },
   "main": "./lib/index.js",
   "files": [
@@ -76,7 +76,7 @@
   "keywords": [
     "seo",
     "robots",
-    "parser",
+    "generator",
     "typescript",
     "node",
     "sem",
