@@ -9,6 +9,7 @@ export class RobotsGenerator {
   private configDataGet() {}
   private configDataParse() {}
   private fileDataGet() {}
+  private fileDataParse() {}
 
   // flag lines with comments
   private isComment(line: string): boolean {
