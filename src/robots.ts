@@ -65,7 +65,7 @@ export class RobotsGenerator {
     if (isDisallow) return { type: LineType.disallow, content: parsedLine.value };
     // check for allow and return values
     const isAllow = this.checkDirective(parsedLine, LineType.allow);
-    if (isAllow) return { type: LineType.allow, content: this.trimWhitespace(parsedLine.value) };
+    if (isAllow) return { type: LineType.allow, content: parsedLine.value };
     // check for crawl-delay and return values
     const isCrawlDelay = this.checkDirective(parsedLine, LineType.crawlDelay);
     if (isCrawlDelay) return { type: LineType.crawlDelay, content: parsedLine.value };
