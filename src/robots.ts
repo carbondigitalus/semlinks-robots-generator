@@ -27,7 +27,7 @@ export class RobotsGenerator {
     }
     return false;
   }
-
+  // NOT DONE
   // split line by ":"
   // each directive in the robots file is separated by colon
   private splitLine(line: string): LineSplit {
