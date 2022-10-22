@@ -109,10 +109,4 @@ export class RobotsGenerator {
       });
     });
   }
-
-  public logFile(filePath: string) {
-    const readStream = readFileSync(filePath, 'utf8');
-    // console.log('parsed file:\n', readStream);
-    return readStream;
-  }
 }
