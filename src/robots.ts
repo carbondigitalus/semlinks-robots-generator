@@ -57,7 +57,7 @@ export class RobotsGenerator {
     if (isUserAgent) {
       return {
         type: LineType.userAgent,
-        content: this.trimWhitespace(parsedLine.value)
+        content: parsedLine.value
       };
     }
     // check for disallow and return values
