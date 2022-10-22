@@ -1,6 +1,10 @@
 {
   "data": [
     {
+      "type": "comment",
+      "content": "sitemaps section"
+    },
+    {
       "type": "sitemap",
       "content": "https://carbondigital.us/sitemaps/post-sitemap1.xml"
     },
@@ -27,6 +31,10 @@
     {
       "type": "blank",
       "content": ""
+    },
+    {
+      "type": "comment",
+      "content": "user-agent section"
     },
     {
       "type": "user-agent",
