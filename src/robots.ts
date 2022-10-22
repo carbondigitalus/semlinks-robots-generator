@@ -43,7 +43,7 @@ export class RobotsGenerator {
   // parse file into array format
   private parseLineIntoArray(line: string): Line {
     // trim spaces before-after line
-    const trimmedLine = this.trimWhitespace(line);
+    const trimmedLine = line;
     // check to see if the line is a comment
     const isComment = this.isComment(trimmedLine);
     // if the line is a comment, return line in format
