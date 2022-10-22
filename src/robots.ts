@@ -11,6 +11,7 @@ export class RobotsGenerator {
   private fileDataGet() {}
   private fileDataParse() {}
 
+  // NOT DONE
   // flag lines with comments
   private isComment(line: string): boolean {
     // the # character starts a comment
