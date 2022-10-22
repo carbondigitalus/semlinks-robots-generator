@@ -10,8 +10,8 @@ export class RobotsGenerator {
   // flag lines with comments
   private isComment(line: string): boolean {
     // the # character starts a comment
-    const commentCharacterFlag = '#';
-    return line.substring(1) === commentCharacterFlag;
+    const commentCharacter = '#';
+    return line.substring(1) === commentCharacter;
   }
 
   // flag blank lines
