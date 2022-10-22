@@ -74,7 +74,7 @@ export class RobotsGenerator {
     if (isSitemap) {
       return {
         type: LineType.sitemap,
-        content: this.trimWhitespace(parsedLine.value.toLowerCase())
+        content: parsedLine.value.toLowerCase()
       };
     }
     return { type: LineType.other, content: parsedLine };
