@@ -18,8 +18,3 @@ export interface Line {
   type: LineType;
   content: LineSplit | string;
 }
-
-export enum ReturnType {
-  console = 'console',
-  browser = 'browser'
-}
