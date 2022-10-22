@@ -1,6 +1,5 @@
 // Custom Modules
-import { ReturnType } from './options';
-import { RobotsParser } from './robots';
+import { RobotsGenerator } from './robots';
 
 export default async function robotsParser(returnType: `${ReturnType}`, filePath: string) {
   // execute class for variable usage
