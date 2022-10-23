@@ -1,5 +1,5 @@
 // Node Modules
-import { createReadStream, readFileSync } from 'fs';
+import { createReadStream, createWriteStream } from 'fs';
 import { createInterface } from 'readline';
 
 // Custom Modules
