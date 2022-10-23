@@ -3,7 +3,7 @@ import { createReadStream, createWriteStream } from 'fs';
 import { createInterface } from 'readline';
 
 // Custom Modules
-import { Line, LineSplit, LineType } from './options';
+import { DataFile, Line, LineType } from './options';
 
 export class RobotsGenerator {
   private configDataGet() {}
