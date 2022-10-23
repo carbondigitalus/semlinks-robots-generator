@@ -9,12 +9,6 @@ export class RobotsGenerator {
   private fileDataParse() {}
 
   // NOT DONE
-  // check for user-agent
-  private checkDirective(line: LineSplit, value: LineType): boolean {
-    // @ts-ignore-next-line
-    return line.directive.toLowerCase().includes(value);
-  }
-  // NOT DONE
   // parse file into array format
   private parseLineIntoArray(line: string): Line {
     // trim spaces before-after line
