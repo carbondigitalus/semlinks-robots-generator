@@ -16,6 +16,8 @@ export class RobotsGenerator {
     return new Promise((resolve, reject) => {
       // create empty string for returning data
       let dataFile: string = '';
+      // get path for data file
+      const path = `${__dirname}/data.robots.json`;
       // create interface with the read stream
       const readline = createInterface({
         input: createReadStream('filePath', 'utf8'),
