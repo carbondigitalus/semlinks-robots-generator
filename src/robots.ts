@@ -30,6 +30,7 @@ export class RobotsGenerator {
         fileData.push(lineArray);
         return fileData;
       });
+
       readline.on('error', (error) => {
         console.log('parseFile error:\n', error);
         reject(error);
