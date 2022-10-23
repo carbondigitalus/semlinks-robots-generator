@@ -12,7 +12,6 @@ export class RobotsGenerator {
   private trimWhitespace(line: string): string {
     return line.trim();
   }
-  // NOT DONE
   public async generateFile() {
   private fileDataGet(): Promise<string> {
     return new Promise((resolve, reject) => {
