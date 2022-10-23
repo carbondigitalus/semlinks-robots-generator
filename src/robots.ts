@@ -9,17 +9,6 @@ export class RobotsGenerator {
   private fileDataParse() {}
 
   // NOT DONE
-  // split line by ":"
-  // each directive in the robots file is separated by colon
-  private splitLine(line: string): LineSplit {
-    const len = line.length;
-    const colonIndex = line.indexOf(':');
-    return {
-      directive: line.substring(0, colonIndex).toLowerCase(),
-      value: line.substring(colonIndex + 1, len)
-    };
-  }
-  // NOT DONE
   // check for user-agent
   private checkDirective(line: LineSplit, value: LineType): boolean {
     // @ts-ignore-next-line
