@@ -24,12 +24,9 @@ export class RobotsGenerator {
         crlfDelay: Infinity
       });
       readline.on('line', (line) => {
-        // format each line into array
-        const lineArray = this.parseLineIntoArray(line);
-        // console.log('readFile, array:\n', lineArray);
-        // push line into array
-        fileData.push(lineArray);
-        return fileData;
+        // console.log('readline:\n', line);
+        // return combined strings
+        return (dataFile += `${line}`);
       });
 
       readline.on('error', (error) => {
