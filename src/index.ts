@@ -8,3 +8,4 @@ export default async function robotsGenerator(outPath: string) {
   // console.log('robotsGenerator data:\n', data);
   return data;
 }
+robotsGenerator(`${__dirname}`);
