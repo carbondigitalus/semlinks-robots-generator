@@ -36,6 +36,7 @@ export class RobotsGenerator {
         reject(error);
       });
       // when all lines are read, close the stream
+
       readline.on('close', () => {
         console.log('updated array data:\n', fileData);
         resolve(fileData);
