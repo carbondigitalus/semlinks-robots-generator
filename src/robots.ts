@@ -43,6 +43,7 @@ export class RobotsGenerator {
       });
     });
   }
+
   private async fileDataParse(): Promise<DataFile> {
   // flag lines with comments
   private isComment(line: Line): boolean {
