@@ -12,4 +12,7 @@ export interface Line {
   type: LineType;
   content: string;
 }
+
+export interface DataFile {
+  data: Line[];
 }
