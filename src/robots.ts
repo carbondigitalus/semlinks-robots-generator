@@ -15,8 +15,8 @@ export class RobotsGenerator {
   public async generateFile() {
   private fileDataGet(): Promise<string> {
     return new Promise((resolve, reject) => {
-      // create empty array for returning data
-      let fileData: any = [];
+      // create empty string for returning data
+      let dataFile: string = '';
       // create interface with the read stream
       const readline = createInterface({
         input: createReadStream('filePath', 'utf8'),
