@@ -11,6 +11,7 @@ export class RobotsGenerator {
     return line.trim();
   }
   public async generateFile() {
+
   private fileDataGet(): Promise<string> {
     return new Promise((resolve, reject) => {
       // create empty string for returning data
