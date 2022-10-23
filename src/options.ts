@@ -10,5 +10,6 @@ export enum LineType {
 }
 export interface Line {
   type: LineType;
-  content: LineSplit | string;
+  content: string;
+}
 }
