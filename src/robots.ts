@@ -8,27 +8,6 @@ import { DataFile, Line, LineType } from './options';
 export class RobotsGenerator {
   private fileDataParse() {}
 
-  // NOT DONE
-  // parse file into array format
-  private parseLineIntoArray(line: string): Line {
-    // trim spaces before-after line
-    const trimmedLine = line;
-    // check to see if the line is a comment
-    const isComment = this.isComment(trimmedLine);
-    // if the line is a comment, return line in format
-    if (isComment) return { type: LineType.comment, content: trimmedLine };
-    const isBlank = this.isBlank(trimmedLine);
-    if (isBlank) return { type: LineType.blank, content: '' };
-    // otherwise, split line and parse values
-    const parsedLine = this.splitLine(trimmedLine);
-    // check for user-agent and return values
-    const isUserAgent = this.checkDirective(parsedLine, LineType.userAgent);
-    if (isUserAgent) {
-      return {
-        type: LineType.userAgent,
-        content: parsedLine.value
-      };
-    }
     // check for disallow and return values
     const isDisallow = this.checkDirective(parsedLine, LineType.disallow);
     if (isDisallow) return { type: LineType.disallow, content: parsedLine.value };
@@ -92,6 +71,20 @@ export class RobotsGenerator {
   private isBlank(line: Line): boolean {
     if (line.type === LineType.blank) return true;
     return false;
+  }
+
+  // parse file into array format
+  private parseArrayIntoLine(line: Line): string {
+    // check to see if the line is a comment
+    const isComment = this.isComment(line);
+    // if the line is a comment, return line in format
+    if (isComment) return `#${line.content}\n`;
+    // check to see if the line is blank
+    const isBlank = this.isBlank(line);
+    // if the line is blank, return line in format
+    if (isBlank) return '\n';
+    // otherwise, combine line and return values
+    return this.combineLine(line);
   }
 
 }
