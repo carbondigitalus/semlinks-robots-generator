@@ -20,7 +20,7 @@ export class RobotsGenerator {
       const path = `${__dirname}/data.robots.json`;
       // create interface with the read stream
       const readline = createInterface({
-        input: createReadStream('filePath', 'utf8'),
+        input: createReadStream(path),
         crlfDelay: Infinity
       });
       // for each line being read, the line event kicks off
