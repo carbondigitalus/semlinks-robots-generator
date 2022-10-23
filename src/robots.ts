@@ -47,6 +47,9 @@ export class RobotsGenerator {
       };
     }
     return { type: LineType.other, content: parsedLine };
+  // remove whitespace before & after line to make writing each line easier
+  private trimWhitespace(line: string): string {
+    return line.trim();
   }
   // NOT DONE
   public async generateFile() {
