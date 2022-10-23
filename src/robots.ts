@@ -73,6 +73,11 @@ export class RobotsGenerator {
     return false;
   }
 
+  // each directive in the robots file is separated by colon
+  private combineLine(line: Line): string {
+    return `${line.type}: ${line.content}\n`;
+  }
+
   // parse file into array format
   private parseArrayIntoLine(line: Line): string {
     // check to see if the line is a comment
