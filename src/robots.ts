@@ -9,13 +9,6 @@ export class RobotsGenerator {
   private fileDataParse() {}
 
   // NOT DONE
-  // flag lines with comments
-  private isComment(line: string): boolean {
-    // the # character starts a comment
-    const commentCharacter = '#';
-    return line.substring(1) === commentCharacter;
-  }
-  // NOT DONE
   // flag blank lines
   private isBlank(line: string): boolean {
     const cleanLine = line;
@@ -112,4 +105,10 @@ export class RobotsGenerator {
       });
     });
   }
+  // flag lines with comments
+  private isComment(line: Line): boolean {
+    if (line.type === LineType.comment) return true;
+    return false;
+  }
+
 }
