@@ -63,6 +63,78 @@ Below are the major frameworks/libraries that are currently used in this project
 
 ## Usage
 
+Setup Data Config for the Robots file:
+
+```json
+// required file name: data.robots.json
+{
+  "data": []
+}
+```
+
+Inside the data array, each object follows the interface formats:
+
+```ts
+export interface DataFile {
+  data: Line[];
+}
+export interface Line {
+  type: LineType;
+  content: string;
+}
+export enum LineType {
+  allow = 'allow',
+  blank = 'blank',
+  comment = 'comment',
+  crawlDelay = 'crawl-delay',
+  disallow = 'disallow',
+  sitemap = 'sitemap',
+  userAgent = 'user-agent',
+  other = 'other'
+}
+```
+
+This translates into the following examples for each `LineType`. Currently, the `other` type doesn't output any results. If you have a need to capture other directives that haven't been included, please submit a bug so that we can review and research it.
+
+```json
+{
+  "data": [
+    {
+      "type": "allow",
+      "content": "/wp-admin/admin-ajax.php"
+    },
+    {
+      "type": "blank",
+      "content": ""
+    },
+    {
+      "type": "comment",
+      "content": "sitemaps section"
+    },
+    {
+      "type": "crawl-delay",
+      "content": "10"
+    },
+    {
+      "type": "disallow",
+      "content": "/wp-admin/"
+    },
+    {
+      "type": "sitemap",
+      "content": "https://carbondigital.us/sitemaps/post-sitemap1.xml"
+    },
+    {
+      "type": "user-agent",
+      "content": "SemrushBot"
+    },
+    {
+      "type": "other",
+      "content": ""
+    }
+  ]
+}
+```
+
 Console.Log your robots.txt file:
 
 ```js
@@ -93,147 +165,6 @@ User-agent: Googlebot-Image
 User-agent: *
     Disallow: /wp-admin/
     Allow: /wp-admin/admin-ajax.php
-```
-
-Return Array of data from your robots.txt file:
-
-```js
-import { robotsParser } from '@carbondigital/robots-parser';
-robotsParser('browser', './my-robots-file.txt');
-```
-
-Array Output:
-
-```js
-[
-  {
-    type: 'sitemap',
-    content: 'https://carbondigital.us/sitemaps/post-sitemap1.xml'
-  },
-  {
-    type: 'sitemap',
-    content: 'https://carbondigital.us/sitemaps/page-sitemap1.xml'
-  },
-  {
-    type: 'sitemap',
-    content: 'https://carbondigital.us/sitemaps/projects-sitemap1.xml'
-  },
-  {
-    type: 'sitemap',
-    content: 'https://carbondigital.us/sitemaps/services-sitemap1.xml'
-  },
-  {
-    type: 'sitemap',
-    content: 'https://carbondigital.us/sitemaps/locations-sitemap1.xml'
-  },
-  {
-    type: 'sitemap',
-    content: 'https://carbondigital.us/sitemaps/category-sitemap1.xml'
-  },
-  { type: 'blank', content: '' },
-  { type: 'user-agent', content: 'SemrushBot' },
-  { type: 'disallow', content: ' /' },
-  { type: 'user-agent', content: 'SemrushBot-SA' },
-  { type: 'disallow', content: ' /' },
-  { type: 'user-agent', content: 'MJ12bot' },
-  { type: 'disallow', content: ' /' },
-  { type: 'user-agent', content: 'Mediapartners-Google' },
-  { type: 'disallow', content: '' },
-  { type: 'user-agent', content: 'Googlebot-Image' },
-  { type: 'disallow', content: '' },
-  { type: 'user-agent', content: '*' },
-  { type: 'disallow', content: ' /wp-admin/' },
-  { type: 'allow', content: ' /wp-admin/admin-ajax.php' }
-];
-```
-
-Our SEM Links app is a Nest.js project. In that project, we have a data wrapper so all returned data is part of a "data" object. When testing this in Postman, here is the same data being returned.
-
-```json
-{
-  "data": [
-    {
-      "type": "sitemap",
-      "content": "https://carbondigital.us/sitemaps/post-sitemap1.xml"
-    },
-    {
-      "type": "sitemap",
-      "content": "https://carbondigital.us/sitemaps/page-sitemap1.xml"
-    },
-    {
-      "type": "sitemap",
-      "content": "https://carbondigital.us/sitemaps/projects-sitemap1.xml"
-    },
-    {
-      "type": "sitemap",
-      "content": "https://carbondigital.us/sitemaps/services-sitemap1.xml"
-    },
-    {
-      "type": "sitemap",
-      "content": "https://carbondigital.us/sitemaps/locations-sitemap1.xml"
-    },
-    {
-      "type": "sitemap",
-      "content": "https://carbondigital.us/sitemaps/category-sitemap1.xml"
-    },
-    {
-      "type": "blank",
-      "content": ""
-    },
-    {
-      "type": "user-agent",
-      "content": "SemrushBot"
-    },
-    {
-      "type": "disallow",
-      "content": "/"
-    },
-    {
-      "type": "user-agent",
-      "content": "SemrushBot-SA"
-    },
-    {
-      "type": "disallow",
-      "content": "/"
-    },
-    {
-      "type": "user-agent",
-      "content": "MJ12bot"
-    },
-    {
-      "type": "disallow",
-      "content": "/"
-    },
-    {
-      "type": "user-agent",
-      "content": "Mediapartners-Google"
-    },
-    {
-      "type": "disallow",
-      "content": ""
-    },
-    {
-      "type": "user-agent",
-      "content": "Googlebot-Image"
-    },
-    {
-      "type": "disallow",
-      "content": ""
-    },
-    {
-      "type": "user-agent",
-      "content": "*"
-    },
-    {
-      "type": "disallow",
-      "content": "/wp-admin/"
-    },
-    {
-      "type": "allow",
-      "content": "/wp-admin/admin-ajax.php"
-    }
-  ]
-}
 ```
 
 <!--
