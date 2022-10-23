@@ -23,7 +23,6 @@ export class RobotsGenerator {
         input: createReadStream(path),
         crlfDelay: Infinity
       });
-      // for each line being read, the line event kicks off
       readline.on('line', (line) => {
         // format each line into array
         const lineArray = this.parseLineIntoArray(line);
