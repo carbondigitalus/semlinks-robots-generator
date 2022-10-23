@@ -6,7 +6,6 @@ import { createInterface } from 'readline';
 import { DataFile, Line, LineType } from './options';
 
 export class RobotsGenerator {
-  private fileDataGet() {}
   private fileDataParse() {}
 
   // NOT DONE
@@ -84,6 +83,7 @@ export class RobotsGenerator {
   }
   // NOT DONE
   public async generateFile() {
+  private fileDataGet(): Promise<string> {
     return new Promise((resolve, reject) => {
       // create empty array for returning data
       let fileData: any = [];
