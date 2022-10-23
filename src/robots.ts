@@ -36,8 +36,8 @@ export class RobotsGenerator {
       // when all lines are read, close the stream
 
       readline.on('close', () => {
-        resolve(fileData);
         // console.log('readline data read stream completed:\n', dataFile);
+        resolve(dataFile);
       });
     });
   }
