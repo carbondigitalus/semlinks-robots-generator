@@ -7,7 +7,6 @@ import { DataFile, Line, LineType } from './options';
 
 export class RobotsGenerator {
   private fileDataParse() {}
-
   // remove whitespace before & after line to make writing each line easier
   private trimWhitespace(line: string): string {
     return line.trim();
