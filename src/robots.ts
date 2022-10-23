@@ -6,7 +6,6 @@ import { createInterface } from 'readline';
 import { DataFile, Line, LineType } from './options';
 
 export class RobotsGenerator {
-  private configDataParse() {}
   private fileDataGet() {}
   private fileDataParse() {}
 
