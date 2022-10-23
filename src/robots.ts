@@ -43,6 +43,14 @@ export class RobotsGenerator {
   }
 
   private async fileDataParse(): Promise<DataFile> {
+    // import file string
+    const file = await this.fileDataGet();
+    // console.log('fileDataParse file:\n', file);
+    const data: DataFile = JSON.parse(file);
+    // console.log('fileDataParse data:\n', data);
+    return data;
+  }
+
   // flag lines with comments
   private isComment(line: Line): boolean {
     if (line.type === LineType.comment) return true;
