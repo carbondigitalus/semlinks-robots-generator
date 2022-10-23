@@ -8,24 +8,6 @@ import { DataFile, Line, LineType } from './options';
 export class RobotsGenerator {
   private fileDataParse() {}
 
-    // check for disallow and return values
-    const isDisallow = this.checkDirective(parsedLine, LineType.disallow);
-    if (isDisallow) return { type: LineType.disallow, content: parsedLine.value };
-    // check for allow and return values
-    const isAllow = this.checkDirective(parsedLine, LineType.allow);
-    if (isAllow) return { type: LineType.allow, content: parsedLine.value };
-    // check for crawl-delay and return values
-    const isCrawlDelay = this.checkDirective(parsedLine, LineType.crawlDelay);
-    if (isCrawlDelay) return { type: LineType.crawlDelay, content: parsedLine.value };
-    // check for sitemap and return values
-    const isSitemap = this.checkDirective(parsedLine, LineType.sitemap);
-    if (isSitemap) {
-      return {
-        type: LineType.sitemap,
-        content: parsedLine.value.toLowerCase()
-      };
-    }
-    return { type: LineType.other, content: parsedLine };
   // remove whitespace before & after line to make writing each line easier
   private trimWhitespace(line: string): string {
     return line.trim();
