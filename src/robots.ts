@@ -10,7 +10,6 @@ export class RobotsGenerator {
   private trimWhitespace(line: string): string {
     return line.trim();
   }
-  public async generateFile() {
 
   private fileDataGet(): Promise<string> {
     return new Promise((resolve, reject) => {
@@ -82,4 +81,17 @@ export class RobotsGenerator {
     return this.combineLine(line);
   }
 
+  public async generateFile(outPath: string) {
+    let dataFile: string = '';
+    // get file data
+    const file: DataFile = await this.fileDataParse();
+    // console.log('data:\n', file);
+    file.data.forEach((line: Line) => {
+      const oneLine = this.parseArrayIntoLine(line);
+      console.log(this.trimWhitespace(oneLine));
+      return (dataFile += oneLine);
+    });
+    const writeFile = createWriteStream(`${outPath}/robots.txt`, { encoding: 'utf8' });
+    return writeFile.write(dataFile);
+  }
 }
