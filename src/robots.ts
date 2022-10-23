@@ -9,15 +9,6 @@ export class RobotsGenerator {
   private fileDataParse() {}
 
   // NOT DONE
-  // flag blank lines
-  private isBlank(line: string): boolean {
-    const cleanLine = line;
-    if (cleanLine === '' || cleanLine === ' ') {
-      return true;
-    }
-    return false;
-  }
-  // NOT DONE
   // split line by ":"
   // each directive in the robots file is separated by colon
   private splitLine(line: string): LineSplit {
@@ -108,6 +99,12 @@ export class RobotsGenerator {
   // flag lines with comments
   private isComment(line: Line): boolean {
     if (line.type === LineType.comment) return true;
+    return false;
+  }
+
+  // flag blank lines
+  private isBlank(line: Line): boolean {
+    if (line.type === LineType.blank) return true;
     return false;
   }
 
