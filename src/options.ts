@@ -1,11 +1,11 @@
 export enum LineType {
-  comment = 'comment',
-  userAgent = 'user-agent',
   allow = 'allow',
+  blank = 'blank',
+  comment = 'comment',
+  crawlDelay = 'crawl-delay',
   disallow = 'disallow',
   sitemap = 'sitemap',
-  crawlDelay = 'crawl-delay',
-  blank = 'blank',
+  userAgent = 'user-agent',
   other = 'other'
 }
 export interface Line {
