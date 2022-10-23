@@ -6,7 +6,6 @@ import { createInterface } from 'readline';
 import { DataFile, Line, LineType } from './options';
 
 export class RobotsGenerator {
-  private fileDataParse() {}
   // remove whitespace before & after line to make writing each line easier
   private trimWhitespace(line: string): string {
     return line.trim();
@@ -41,6 +40,7 @@ export class RobotsGenerator {
       });
     });
   }
+  private async fileDataParse(): Promise<DataFile> {
   // flag lines with comments
   private isComment(line: Line): boolean {
     if (line.type === LineType.comment) return true;
