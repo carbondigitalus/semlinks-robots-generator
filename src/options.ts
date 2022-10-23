@@ -8,12 +8,6 @@ export enum LineType {
   blank = 'blank',
   other = 'other'
 }
-
-export interface LineSplit {
-  directive?: string;
-  value: string;
-}
-
 export interface Line {
   type: LineType;
   content: LineSplit | string;
